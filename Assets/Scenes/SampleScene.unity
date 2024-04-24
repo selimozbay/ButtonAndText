@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 207721096}
   - component: {fileID: 207721095}
   - component: {fileID: 207721094}
+  - component: {fileID: 207721098}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -225,6 +226,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &207721098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207721093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30cde97068d424039a6d056bbd871750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baslik: {fileID: 1973073083}
+  tur: {fileID: 210577454}
+  icerik: {fileID: 1818425125}
+  basliklar:
+  - engineer
+  - mother
+  - home
+  - programmer
+  - firefighter
+  - believe
+  - create
+  turler:
+  - noun
+  - noun
+  - noun
+  - noun
+  - noun
+  - verb
+  - verb
+  icerikler:
+  - one who gets excited about things no one else cares about.
+  - the person who sees the best in you no matter what.
+  - the house, apartment, etc. where you live, especially with your family.
+  - someone who fixes a problem you did not know you had in a way you do not understand.
+  - someone who is fearsless in saving lives, decisive, courageous and determined,
+    a true hero.
+  - to have confidence or faith in the truth existence, reliability or value of something.
+  - "to evolve from one's own tought or imaginati\u0131ns, as a work of art or an
+    invention."
 --- !u!1 &210577452
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1542380841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 207721098}
+        m_TargetAssemblyTypeName: buttonScript, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1542380841
 MonoBehaviour:
   m_ObjectHideFlags: 0
