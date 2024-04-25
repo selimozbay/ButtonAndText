@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class buttonScript : MonoBehaviour
 {
 
     public TextMeshProUGUI baslik, tur, icerik;
-
+    int rastgeleIndex = 1, eskiIndex = 0;
     public string[] basliklar = 
     {
         "engineer",
@@ -43,9 +44,22 @@ public class buttonScript : MonoBehaviour
 
         
     };
-    void Start() {}
+    void Start() {
+        Click();
+    }
 
 public void Click() {
-    
+
+    do
+    {
+        rastgeleIndex = Random.Range(0, basliklar.Length);
+    } while (rastgeleIndex == eskiIndex);
+
+
+    eskiIndex = rastgeleIndex;
+
+    baslik.text = basliklar[rastgeleIndex];
+    tur.text = turler[rastgeleIndex];
+    icerik.text = icerikler[rastgeleIndex];
 }
 }
